@@ -28,13 +28,7 @@ const noteSetting = function (id) {
       content: '删 除',
       style: { background: 'red', color: '#fff'},
       handler: () => {
-        this.$messagebox({
-            message: '确定要删除嘛？',
-            showCancelButton: true,
-            cancelButtonText: '取消'
-          }).then(() => {
-          this.DELETE_NOTE(id)
-        })
+        this.$messagebox.confirm('确定要删除嘛？').then(() => this.DELETE_NOTE(id))
       }
     }
   ]

@@ -27,7 +27,8 @@ export default {
     addNote () {
       this.ADD_NOTE(this.form)
       this.$toast({
-        message: '操作成功'
+        message: '新增成功',
+        iconClass: 'icon-success'
       })
       this.$router.push({name: 'list'})
     }

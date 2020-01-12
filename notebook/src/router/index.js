@@ -28,7 +28,7 @@ export const router = new Router({
     },
     {
       path: '*',
-      redirect: 'list'
+      redirect: '/list'
     }
   ]
 })

@@ -3,16 +3,14 @@ import Vuex from 'vuex'
 import utils from '@/utils'
 
 Vue.use(Vuex)
-
+const getTime = function () {
+  return new Date().getTime()
+}
 const state = {
-    index: 0,
     noteList: []
 }
 
 const mutations = {
-//   GET_NOTE_LIST (state, val) {
-//     state.noteList = val || []
-//   },
   GET_NOTE_LIST (state) {
     let data = utils.getLocalData() || []
     state.index = data.length
@@ -22,7 +20,7 @@ const mutations = {
     utils.setLocalData(state.noteList)
   },
   ADD_NOTE (state, val) {
-    let data = Object.assign({}, val, { id: ++state.index })
+    let data = Object.assign({}, val, { id: getTime()})
     state.noteList.push(data)
   },
   DELETE_NOTE (state, val) {

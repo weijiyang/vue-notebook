@@ -19,8 +19,6 @@ store.dispatch('getNoteList').then(() => {
   }).$mount('#app')
 })
 
-// window.addEventListener('beforeunload',store.commit('SET_LOCALSTORAGE'))
-
 window.onbeforeunload = function (t) {     
   const e = window.event||t;  
   store.commit('SET_LOCALSTORAGE');

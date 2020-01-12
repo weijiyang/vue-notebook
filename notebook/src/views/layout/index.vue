@@ -26,13 +26,7 @@ export default {
     methods: {
         ...mapMutations(['DELETE_ALL']),
         deleteAllNotes () {
-            this.$messagebox({
-                message: '确定要删除全部记录嘛？',
-                showCancelButton: true,
-                cancelButtonText: '取消'
-            }).then(() => {
-                this.DELETE_ALL()
-            })
+            this.$messagebox.confirm('确定要删除全部记录嘛？').then(() => this.DELETE_ALL())
         }
     },
     watch: {
