@@ -1,5 +1,3 @@
-# vue-notebook
-一个简单计事功能
 # notebook
 
 ## Project setup
