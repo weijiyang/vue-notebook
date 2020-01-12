@@ -11,6 +11,7 @@ export const router = new Router({
     {
       path: '/',
       component: layout,
+      redirect: '/list',
       children: [
         {
           name: 'list',

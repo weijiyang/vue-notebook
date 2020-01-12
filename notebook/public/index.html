@@ -8,7 +8,8 @@
     <title>notebook</title>
     <script>
       const docEl = document.documentElement;
-      const scale = 1 / window.devicePixelRatio;
+      const dpr = window.devicePixelRatio || 1;
+      const scale = 1 / dpr;
       const viewport = document.querySelector('meta[name="viewport"]');
       if (!viewport) {
           viewport = document.createElement('meta');
